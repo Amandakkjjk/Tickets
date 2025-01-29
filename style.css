@@ -1,0 +1,360 @@
+body {
+  font-style: initial;
+  font-family: sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  width: 900px;
+  height: 400px;
+  z-index: 10;
+  position: relative;
+  background: linear-gradient(45deg,
+      hwb(241 50% 6%),
+      hsl(0, 89%, 75%),
+      hwb(241 50% 6%),
+      hsl(0, 89%, 75%),
+      hwb(241 50% 6%));
+  background-size: 800% 800%;
+  animation: fundo 100s infinite;
+}
+
+html {
+  position: relative;
+  z-index: 20;
+
+}
+
+@keyframes fundo {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  70% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes stars {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-800px);
+  }
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 800%;
+  height: 800vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.stars {
+  position: absolute;
+  width: 400%;
+  height: 400%;
+  top: 0;
+  left: 0;
+  background-image:
+    radial-gradient(1px 1px at 10px 20px, white, transparent),
+    radial-gradient(2px 2px at 150px 200px, white, transparent),
+    radial-gradient(3px 3px at 300px 400px, white, transparent),
+    radial-gradient(1px 1px at 500px 600px, white, transparent),
+    radial-gradient(2px 2px at 700px 300px, white, transparent),
+    radial-gradient(3px 3px at 900px 100px, white, transparent),
+    radial-gradient(1px 1px at 1100px 700px, white, transparent),
+    radial-gradient(2px 2px at 150px 800px, white, transparent),
+    radial-gradient(3px 3px at 400px 500px, white, transparent),
+    radial-gradient(1px 1px at 800px 200px, white, transparent),
+    radial-gradient(2px 2px at 600px 300px, white, transparent),
+    radial-gradient(3px 3px at 1200px 400px, white, transparent),
+    radial-gradient(1px 1px at 1400px 100px, white, transparent),
+    radial-gradient(2px 2px at 1600px 500px, white, transparent),
+    radial-gradient(3px 3px at 1800px 700px, white, transparent),
+    radial-gradient(2px 2px at 1900px 800px, white, transparent),
+    radial-gradient(1px 1px at 1750px 300px, white, transparent),
+    radial-gradient(2px 2px at 1650px 100px, white, transparent),
+    radial-gradient(3px 3px at 1450px 600px, white, transparent),
+    radial-gradient(1px 1px at 1550px 700px, white, transparent),
+    radial-gradient(2px 2px at 1350px 200px, white, transparent),
+    radial-gradient(3px 3px at 1150px 400px, white, transparent),
+    radial-gradient(1px 1px at 950px 600px, white, transparent),
+    radial-gradient(2px 2px at 750px 800px, white, transparent),
+    radial-gradient(3px 3px at 550px 300px, white, transparent),
+    radial-gradient(2px 2px at 350px 100px, white, transparent),
+    radial-gradient(1px 1px at 250px 400px, white, transparent),
+    radial-gradient(2px 2px at 50px 700px, white, transparent),
+    radial-gradient(3px 3px at 1250px 800px, white, transparent),
+    radial-gradient(1px 1px at 1700px 100px, white, transparent);
+  background-repeat: repeat;
+  z-index: -1;
+  background-size: 1900px 800px;
+  /* Ajuste conforme necessário */
+  animation: stars 20s linear infinite;
+}
+
+
+.grupo-nome {
+  position: relative;
+
+}
+
+label {
+  color: #000000;
+  padding: 0 5px;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 1em;
+  pointer-events: none;
+  transition: .3s;
+}
+
+input {
+  color: rgb(0, 0, 0);
+  border: 2px solid var(#000000);
+  border-radius: 5px;
+  width: 96%;
+  height: 100px;
+  padding: 0 1rem;
+  outline: none;
+}
+
+input:valid~label {
+  top: 0;
+  background-color: white;
+  border-radius: 5px;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #000000;
+}
+
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+}
+
+button {
+
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+
+
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+  position: relative;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  z-index: 10;
+  background-color: #f8f9fa;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.result-number {
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.result-url {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.result-url:hover {
+  text-decoration: underline;
+}
+
+.result-score {
+  float: right;
+  color: #28a745;
+}
+
+.caixa {
+  position: absolute;
+  width: 1000px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  left: 0%;
+  bottom: -310px;
+  animation: caixa 25s linear infinite;
+}
+
+@keyframes caixa {
+  from {
+    transform: translateX(1350px);
+  }
+
+  to {
+    transform: translateX(-800px);
+  }
+}
+
+
+.cat {
+  background-color: #757472;
+  height: 65px;
+  width: 80px;
+  border-radius: 0 80px 80px 0;
+  position: relative;
+  bottom: -118px;
+  left: 150px;
+  
+}
+
+.ear {
+  height: 15px;
+  width: 15px;
+  background-color: #474747;
+
+  position: relative;
+  border-radius: 20px 0 0 0;
+  box-shadow: 25px 0 #474747;
+  left: 170px;
+  bottom: -39px;
+  transform-origin: bottom right;
+
+}
+
+.eye,
+.eye:before {
+  height: 7px;
+  width: 10px;
+  border: 2px solid #2c2c2c;
+  position: absolute;
+  border-radius: 0 0 15px 15px;
+  border-top: none;
+}
+
+.eye {
+  left: 180px;
+  bottom: -50px;
+}
+
+.eye:before {
+  content: "";
+  left: 30px;
+}
+
+.nose {
+  background-color: #ffffff;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  position: relative;
+  bottom: -60px;
+  left: 190px;
+  box-shadow: 12px 0 #ffffff;
+  
+}
+
+.body {
+  background-color: #7c7c7c;
+  height: 90px;
+  width: 140px;
+  position: absolute;
+  left: 38px;
+  bottom: -10;
+  border-radius: 60px 60px 0 0;
+  animation: sleep 2s infinite;
+  transform-origin: bottom right;
+}
+
+@keyframes sleep {
+  50% {
+    transform: scale(0.9, 1.05);
+  }
+}
+
+.tail {
+  background-color: #7c7c7c;
+  height: 20px;
+  width: 100px;
+  position: absolute;
+  left: 5px;
+  bottom: -89px;
+  border-radius: 20px 0 0 20px;
+}
+
+.bubble {
+  height: 20px;
+  width: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  left: 250px;
+  bottom: -30px;
+  border-radius: 50px 50px 50px 5px;
+  animation: bubble-scale 2s infinite;
+}
+
+@keyframes bubble-scale {
+  50% {
+    transform: scale(1.6);
+  }
+}
+
+.shadow {
+  height: 20px;
+  width: 240px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -104px;
+  left: -10px;
+  
+}
+@keyframes shadow {
+  50% {
+      transform: scaleX(0.7);
+  }
+}
+.shadowa {
+  height: 20px;
+  width: 220px;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -124px;
+  left: -20px;
+  animation: shadow 12s infinite;
+}
+.shadowaa {
+  height: 20px;
+  width: 245px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -144px;
+  left: -10px;
+  animation: shadow 10s infinite;
+}

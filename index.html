@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Ticket</title>
+    <script src="https://unpkg.com/htmx.org@2.0.4"
+        integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Pesquisar pelo ticket</h1>
+    <div class="grupo-nome">
+        <input required type="text" id="Descrição do Ticket">
+        <label for="Descrição do Ticket">Descrição do Ticket</label>
+        <div class="container">
+            <div class="stars"></div>
+            <div class="stars2"></div>
+        </div>
+    </div>
+    <div class="button-group">
+        <select id="search-type" name="search-type">
+            <option value="entire">Conteúdo Ticket</option>
+            <option value="message">Única Mensagem</option>
+        </select>
+        <button hx-post="/tickets/search" hx-trigger="click" hx-target="#results"
+            hx-include="[id='search-type'],[id='search-input']">
+            Pesquisar
+        </button>
+    </div>
+
+ <ul id="results">
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
+            <span class="result-score">0.899999</span>
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
+            <span class="result-score">0.999999</span>
+
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
+            <span class="result-score">0.899999</span>
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
+            <span class="result-score">0.999999</span>
+
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
+            <span class="result-score">0.899999</span>
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
+            <span class="result-score">0.999999</span>
+
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
+            <span class="result-score">0.899999</span>
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
+            <span class="result-score">0.999999</span>
+
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
+            <span class="result-score">0.899999</span>
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
+            <span class="result-score">0.999999</span>
+
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
+            <span class="result-score">0.899999</span>
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
+            <span class="result-score">0.999999</span>
+
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
+            <span class="result-score">0.899999</span>
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
+            <span class="result-score">0.999999</span>
+
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
+            <span class="result-score">0.899999</span>
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
+            <span class="result-score">0.999999</span>
+
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
+            <span class="result-score">0.899999</span>
+        </li>
+        <li>
+            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
+                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
+            <span class="result-score">0.999999</span>
+
+        </li>
+    </ul>
+    <div class="caixa">
+        <div class="cat"></div>
+        <div class="ear"></div>
+        <div class="eye"></div>
+        <div class="eye"></div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+        <div class="body"></div>
+        <div class="tail"></div>
+        <div class="bubble"></div>
+        <div class="shadow"></div>
+        <div class="shadowa"></div>
+        <div class="shadowaa"></div>
+    </div>
+</body>
+
+</html>
