@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="htmx-config" content='{"selfRequestsOnly":false}'>
     <title>Search Ticket</title>
     <script src="https://unpkg.com/htmx.org@2.0.4"
         integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
@@ -14,7 +15,7 @@
 <body>
     <h1>Pesquisar pelo ticket</h1>
     <div class="grupo-nome">
-        <input required type="text" id="Descrição do Ticket">
+        <input required type="text" id="search-input" name="search-input">
         <label for="Descrição do Ticket">Descrição do Ticket</label>
         <div class="container">
             <div class="stars"></div>
@@ -26,7 +27,7 @@
             <option value="entire">Conteúdo Ticket</option>
             <option value="message">Única Mensagem</option>
         </select>
-        <button hx-post="/tickets/search" hx-trigger="click" hx-target="#results"
+        <button hx-post="https://caie.dev/tickets/search" hx-trigger="click" hx-target="#results"
             hx-include="[id='search-type'],[id='search-input']">
             Pesquisar
         </button>
@@ -48,89 +49,6 @@
             <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
                 target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
             <span class="result-score">0.899999</span>
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
-            <span class="result-score">0.999999</span>
-
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
-            <span class="result-score">0.899999</span>
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
-            <span class="result-score">0.999999</span>
-
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
-            <span class="result-score">0.899999</span>
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
-            <span class="result-score">0.999999</span>
-
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
-            <span class="result-score">0.899999</span>
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
-            <span class="result-score">0.999999</span>
-
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
-            <span class="result-score">0.899999</span>
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
-            <span class="result-score">0.999999</span>
-
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
-            <span class="result-score">0.899999</span>
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
-            <span class="result-score">0.999999</span>
-
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
-            <span class="result-score">0.899999</span>
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
-            <span class="result-score">0.999999</span>
-
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=2888" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=2888</a>
-            <span class="result-score">0.899999</span>
-        </li>
-        <li>
-            <a href="https://suporte.setrem.com.br/scp/tickets.php?id=27388" class="result-url"
-                target="_blank">https://suporte.setrem.com.br/scp/tickets.php?id=27388</a>
-            <span class="result-score">0.999999</span>
-
         </li>
     </ul>
     <div class="caixa">
